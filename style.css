@@ -1,0 +1,151 @@
+/* Variables */
+:root {
+    --primary: #4361ee;
+    --secondary: #3a0ca3;
+    --accent: #f72585;
+    --dark: #212529;
+    --light: #f8f9fa;
+}
+
+/* Reset & Base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: var(--dark);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Typographie */
+h1, h2, h3 {
+    color: var(--secondary);
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.subtitle {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease;
+}
+
+/* GIF Section */
+.gif-showcase {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.gif {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gif:hover {
+    transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.offer {
+    border-top: 3px solid var(--accent);
+}
+
+.price {
+    color: var(--accent);
+    font-size: 1.2em;
+}
+
+/* Lists */
+.features span {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: var(--secondary);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.contact .info {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.crypto {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.wallets {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.don {
+    font-style: italic;
+    color: var(--accent);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .gif-showcase {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .wallets {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
